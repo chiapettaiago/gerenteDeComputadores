@@ -1,6 +1,3 @@
-from functools import cache
-
-
 class Computadores:
     def __init__(self, os, processador, memoria, idade, dataFormatacao):
         self.os = os
