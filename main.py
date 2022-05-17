@@ -29,7 +29,8 @@ cobranca3 = Computadores("Windows 11", "Intel Core i3", "6 GB", "6 anos de uso",
 cobranca4 = Computadores("Windows 11", "Intel Core i5", "8 GB", "3 anos de idade", "07 de fevereiro de 2022")
 
 if setor == "Cobrança":
-    col1, col2, col3, col4 = st.columns(4) 
+    st.subheader('Setor de Cobrança')
+    col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.subheader("C 01")
         st.text(cobranca1.os)
@@ -58,10 +59,22 @@ if setor == "Cobrança":
         st.text(cobranca4.dataFormatacao)
 
     image = Image.open('fluxos/cobranca.png')
-    st.image(image, caption='Organização de computadores da Cobrança')
+    st.image(image, caption='Organização de computadores da Cobrança', use_column_width=True)
 
 elif setor == "Selecionar...":
     st.markdown('Este software fornece gerenciamento computadorizado e automatizado a todos os computadores da Speed Fiber.')
+elif setor == "Call Center":
+    st.warning('Ainda estamos coletando esses dados. Aguarde só mais um pouco.')
+elif setor == "Financeiro":
+    st.warning('Ainda estamos coletando esses dados. Aguarde só mais um pouco.')
+elif setor == "Gerencia":
+    st.warning('Ainda estamos coletando esses dados. Aguarde só mais um pouco.')
+elif setor == "Caixa":
+    st.warning('Ainda estamos coletando esses dados. Aguarde só mais um pouco.')
+elif setor == "Atendimento SAC":
+    st.warning('Ainda estamos coletando esses dados. Aguarde só mais um pouco.')
+elif setor == "Vendas":
+    st.warning('Ainda estamos coletando esses dados. Aguarde só mais um pouco.')
         
 
 
