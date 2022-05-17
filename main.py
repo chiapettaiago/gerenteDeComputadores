@@ -1,5 +1,6 @@
 import streamlit as st
 from classes import *
+from PIL import Image
 
 hide_menu_style = """
         <style>
@@ -55,6 +56,10 @@ if setor == "Cobrança":
         st.text(cobranca4.memoria)
         st.text(cobranca4.idade)
         st.text(cobranca4.dataFormatacao)
+
+    image = Image.open('fluxos/cobranca.png')
+    st.image(image, caption='Organização de computadores da Cobrança')
+
 elif setor == "Selecionar...":
     st.markdown('Este software fornece gerenciamento computadorizado e automatizado a todos os computadores da Speed Fiber.')
         
