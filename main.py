@@ -32,6 +32,9 @@ cobranca4 = Computadores("Windows 11", "Intel Core i5", "8 GB", "3 anos de idade
 cx1 = Computadores("Windows 11", "Intel Pentium Gold", "8GB", "3 anos de idade", "07 de março de 2022")
 cx2 = Computadores("Windows 10", "Intel Pentium Gold", "8GB", "3 anos de idade", "27 de janeiro de 2022")
 
+vendas1 = Computadores("Windows 10","Intel Core i3", "2 GB", "6 anos de idade", "31 de janeiro de 2022")
+vendas2 = Computadores("Windows 10","Intel Core i3", "2 GB", "6 anos de idade", "13 de janeiro de 2020")
+
 if setor == "Cobrança":
     st.subheader('Setor de Cobrança')
     col1, col2, col3, col4 = st.columns(4)
@@ -97,7 +100,22 @@ elif setor == "Atendimento SAC":
    imageAtendimentoSac = Image.open('fluxos/Atendimento Sac.png')
    st.image(imageAtendimentoSac, caption='Organização de computadores do Caixa', use_column_width=True)
 elif setor == "Vendas":
-    st.warning('Ainda estamos coletando esses dados. Aguarde só mais um pouco.')
+    st.subheader("Setor de Vendas")
+    colVendas1, colVendas2 = st.columns(2)
+    with colVendas1:
+        st.subheader("V 01")
+        st.text(vendas1.os)
+        st.text(vendas1.processador)
+        st.text(vendas1.memoria)
+        st.text(vendas1.idade)
+        st.text(vendas1.dataFormatacao)
+    with colVendas2:
+        st.subheader("V 02")
+        st.text(vendas2.os)
+        st.text(vendas2.processador)
+        st.text(vendas2.memoria)
+        st.text(vendas2.idade)
+        st.text(vendas2.dataFormatacao)
         
 
 
