@@ -25,7 +25,8 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 st.title("Sistema Legionário")
 st.markdown('# Setor de TI e desenvolvimento')
 st.sidebar.title("Opções")
-setor = st.sidebar.selectbox("Gerenciamento de Computadores por Setor", ["Selecionar...","Cobrança", "Call Center", "Financeiro", "Gerencia", "Caixa", "Atendimento SAC", "Vendas", "Sede RCA"])
+setor = st.sidebar.selectbox("Gerenciamento de Computadores por Setor", ["Selecione...","Cobrança", "Call Center", "Financeiro", "Gerencia", "Caixa", "Atendimento SAC", "Vendas", "Sede RCA"])
+about = st.sidebar.selectbox("Informações do sistema Legionário", ["Selecione...","Sobre", "Política de Privacidade", "Termos de Uso"])
 
 #Tipos de Computadores e especiificações
 cobranca1 = Computadores("Windows 10", "Intel Core 2 Quad", "3GB", "14 anos de idade", "Sem Registro")
@@ -34,11 +35,13 @@ cobranca3 = Computadores("Windows 11", "Intel Core i3", "6 GB", "6 anos de uso",
 cobranca4 = Computadores("Windows 11", "Intel Core i5", "8 GB", "3 anos de idade", "07 de fevereiro de 2022")
 
 cx1 = Computadores("Windows 11", "Intel Pentium Gold", "8GB", "3 anos de idade", "07 de março de 2022")
-cx2 = Computadores("Windows 10", "Intel Pentium Gold", "8GB", "3 anos de idade", "27 de janeiro de 2022")
+cx2 = Computadores("Windows 11", "Intel Pentium Gold", "8GB", "3 anos de idade", "27 de janeiro de 2022")
 
 vendas1 = Computadores("Windows 10","Intel Core i3", "2 GB", "6 anos de idade", "31 de janeiro de 2022")
 vendas2 = Computadores("Windows 10","Intel Core i3", "2 GB", "6 anos de idade", "13 de janeiro de 2020")
 
+atendimentoSac1 = Computadores("Windows 11 Pro","Intel Duo E7500","4GB","12 Anos de Idade","11 de Abril de 2022")
+atendimentoSac2 = Computadores("Windows 11 Home","Intel I5 3330","8GB","2 Anos de Idade","03 de Maio de 2022")
 #Variáveis de conteúdo na tela principal relacionado com a sidebar  
 if setor == "Cobrança":
     st.subheader('Setor de Cobrança')
@@ -76,6 +79,34 @@ if setor == "Cobrança":
 elif setor == "Selecionar...":
     st.markdown('Este software fornece gerenciamento computadorizado e automatizado a todos os computadores da Speed Fiber.')
 elif setor == "Call Center":
+   
+    fila7,fila8,fila9,fila10,fila11 = st.columns(5)
+    with fila7:
+        st.subheader("CallC7")
+    with fila8:
+        st.subheader("CallC8")
+    with fila9:
+        st.subheader("CallC9")
+    with fila10:
+        st.subheader("CallC10")
+    with fila11:
+        st.subheader("CallC11")
+    fila2,fila3,fila4,fila5,fila6 = st.columns(5)
+    with fila2:
+        st.subheader("CallC2")
+    with fila3:
+        st.subheader("CallC3")
+    with fila4:
+        st.subheader("CallC4")
+    with fila5:
+        st.subheader("CallC5")
+    with fila6:
+        st.subheader("CallC6")
+    fila1, fila18 = st.columns(2)
+    with fila1:
+        st.subheader("CallC1")
+
+
     image3 = Image.open('fluxos/Sala Sac Pronto.png')
     st.image(image3, caption='Organização de computadores do Sac', use_column_width=True)
 elif setor == "Financeiro":
@@ -106,8 +137,19 @@ elif setor == "Atendimento SAC":
     colSac1, colSac2 = st.columns(2)
     with colSac1:
         st.subheader('AS 1')
+        st.text(atendimentoSac1.os)
+        st.text(atendimentoSac1.processador)
+        st.text(atendimentoSac1.memoria)
+        st.text(atendimentoSac1.idade)
+        st.text(atendimentoSac1.dataFormatacao)
     with colSac2:
         st.subheader('AS 2')
+        st.text(atendimentoSac2.os)
+        st.text(atendimentoSac2.processador)
+        st.text(atendimentoSac2.memoria)
+        st.text(atendimentoSac2.idade)
+        st.text(atendimentoSac2.dataFormatacao)
+
 
     imageAtendimentoSac = Image.open('fluxos/Atendimento Sac.png')
     st.image(imageAtendimentoSac, caption='Organização de computadores do Atendimento Presencial do Sac', use_column_width=True)
@@ -130,6 +172,24 @@ elif setor == "Vendas":
         st.text(vendas2.dataFormatacao)
 elif setor == "Sede RCA":
     st.warning('Ainda estamos coletando esses dados. Aguarde mais um pouco.')
+
+#Variaveis de informações sobre o sistema Legionário
+if about == "Sobre":
+    st.subheader('Sistema Legionário versão 0.12')
+    st.text('Construído utilizando a linguagem Python e baseado na licença MIT.')
+    st.text('Desenvolvido pelo setor de TI da Speed Fiber Teresópolis')
+    st.text('Desenvolvedores: Iago Chiapetta, Patrick Gonçalves.')
+elif about == "Termos de Uso":
+    st.subheader("Termos de Uso")
+    st.text("Este software foi produzido para ser utilizado por todos os funcionários \nda Speed Fiber e somente por eles.")
+    st.text("Qualquer uso por outras pessoas além das citadas acima fere os termos de \nutilização e deve ser evitado.")
+    st.text("Qualquer modificação nos equipamentos da Speed Fiber deve ser registrada aqui \ne só pode ser feita com o consentimento do Gerente Geral.")
+    st.text("O uso de qualquer parte deste software em outros projetos ou \nsoftwares é totalmente proibido e pode acarretar em problemas legais.")
+    st.text("Este software é propriedade intelectual de Iago Chiapetta.")
+elif about == "Politica de Privacidade":
+    st.subheader("Política de Privacidade")
+    st.text('Este software coleta e exibe dados e informações sobre todas as máquinas e \ncomputadores atualmente em uso na Speed Fiber Teresópolis.')
+
         
 
 
