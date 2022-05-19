@@ -1,8 +1,9 @@
+#Bibliotecas importadas
 import streamlit as st
 from classes import *
 from PIL import Image
 
-
+#Remove menu de hamburguer do streamlit
 hide_menu_style = """
         <style>
         #MainMenu {visibility: hidden;}
@@ -10,6 +11,7 @@ hide_menu_style = """
         """
 st.markdown(hide_menu_style, unsafe_allow_html=True)
 
+#Remove rodapé do streamlit
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -19,6 +21,7 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+#Informações do app mostradas na tela inicial
 st.title("Sistema Legionário")
 st.markdown('# Setor de TI e desenvolvimento')
 st.sidebar.title("Opções")
@@ -36,6 +39,7 @@ cx2 = Computadores("Windows 10", "Intel Pentium Gold", "8GB", "3 anos de idade",
 vendas1 = Computadores("Windows 10","Intel Core i3", "2 GB", "6 anos de idade", "31 de janeiro de 2022")
 vendas2 = Computadores("Windows 10","Intel Core i3", "2 GB", "6 anos de idade", "13 de janeiro de 2020")
 
+#Variáveis de conteúdo na tela principal relacionado com a sidebar  
 if setor == "Cobrança":
     st.subheader('Setor de Cobrança')
     col1, col2, col3, col4 = st.columns(4)
