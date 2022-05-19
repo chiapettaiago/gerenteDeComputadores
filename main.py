@@ -1,7 +1,7 @@
 import streamlit as st
 from classes import *
 from PIL import Image
-import requests
+
 
 hide_menu_style = """
         <style>
@@ -19,11 +19,12 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-st.title("Gerenciamento de computadores da Speed Fiber")
+st.title("Sistema Legionário")
 st.markdown('# Setor de TI e desenvolvimento')
 st.sidebar.title("Opções")
-setor = st.sidebar.selectbox("Setor", ["Selecionar...","Cobrança", "Call Center", "Financeiro", "Gerencia", "Caixa", "Atendimento SAC", "Vendas"])
+setor = st.sidebar.selectbox("Gerenciamento de Computadores por Setor", ["Selecionar...","Cobrança", "Call Center", "Financeiro", "Gerencia", "Caixa", "Atendimento SAC", "Vendas", "Sede RCA"])
 
+#Tipos de Computadores e especiificações
 cobranca1 = Computadores("Windows 10", "Intel Core 2 Quad", "3GB", "14 anos de idade", "Sem Registro")
 cobranca2 = Computadores("Windows 11", "Intel Pentium Gold", "8 GB", "3 anos de idade", "Sem Registro")
 cobranca3 = Computadores("Windows 11", "Intel Core i3", "6 GB", "6 anos de uso", "07 de abril de 2022")
@@ -97,8 +98,15 @@ elif setor == "Caixa":
     imageCX = Image.open('fluxos/caixas.png')
     st.image(imageCX, caption='Organização de computadores do Caixa', use_column_width=True)
 elif setor == "Atendimento SAC":
-   imageAtendimentoSac = Image.open('fluxos/Atendimento Sac.png')
-   st.image(imageAtendimentoSac, caption='Organização de computadores do Caixa', use_column_width=True)
+    st.subheader('Antendimento SAC Presencial')
+    colSac1, colSac2 = st.columns(2)
+    with colSac1:
+        st.subheader('AS 1')
+    with colSac2:
+        st.subheader('AS 2')
+
+    imageAtendimentoSac = Image.open('fluxos/Atendimento Sac.png')
+    st.image(imageAtendimentoSac, caption='Organização de computadores do Atendimento Presencial do Sac', use_column_width=True)
 elif setor == "Vendas":
     st.subheader("Setor de Vendas")
     colVendas1, colVendas2 = st.columns(2)
@@ -116,6 +124,8 @@ elif setor == "Vendas":
         st.text(vendas2.memoria)
         st.text(vendas2.idade)
         st.text(vendas2.dataFormatacao)
+elif setor == "Sede RCA":
+    st.warning('Ainda estamos coletando esses dados. Aguarde mais um pouco.')
         
 
 
