@@ -42,6 +42,13 @@ vendas2 = Computadores("Windows 10","Intel Core i3", "2 GB", "6 anos de idade", 
 
 atendimentoSac1 = Computadores("Windows 11 Pro","Intel Duo E7500","4GB","12 Anos de Idade","11 de Abril de 2022")
 atendimentoSac2 = Computadores("Windows 11 Home","Intel I5 3330","8GB","2 Anos de Idade","03 de Maio de 2022")
+
+CallC7 = Computadores("Windows 11 Pro","Intel 5 3330","8Gb","2 Anos de Idade","16 de Maio de 2022")
+CallC8 = Computadores("Windows 11 Pro","AMD Athalon 200GE","GB","1 ano","09 de Fevereiro de 2022")
+CallC10 = Computadores("Windows 11 Pro","AMD Athlon 200GE","8GB","4 Anos de Idade","12 de Abril de 2022")
+CallC11 = Computadores("Windows 11 Pro","AMD Athlon 200GE","8GB","3 Anos de Idade","12 de Abril de 2022")
+CallC2 = Computadores("Windows 11 Pro","Intel 3 550","8GB","11 Anos de Idade","20 de Abril de 2022")
+
 #Variáveis de conteúdo na tela principal relacionado com a sidebar  
 if setor == "Cobrança":
     st.subheader('Setor de Cobrança')
