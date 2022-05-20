@@ -48,6 +48,11 @@ CallC8 = Computadores("Windows 11 Pro","AMD Athalon 200GE","GB","1 ano","09 de F
 CallC10 = Computadores("Windows 11 Pro","AMD Athlon 200GE","8GB","4 Anos de Idade","12 de Abril de 2022")
 CallC11 = Computadores("Windows 11 Pro","AMD Athlon 200GE","8GB","3 Anos de Idade","12 de Abril de 2022")
 CallC2 = Computadores("Windows 11 Pro","Intel 3 550","8GB","11 Anos de Idade","20 de Abril de 2022")
+CallC3 = Computadores("Windows 11 Pro","Intel 3 550","6GB","11 Anos de Idade","07 de Março de 2022")
+CallC4 = Computadores("windows 11 Pro","AMD Atholon 200GE","8GB","1 Ano de Idade","05 de Maio de 2022")
+CallC5= Computadores("Windows 10 Pro","Intel 3 550","4GB","11 Anos de Idade","25 de Janeiro de 2022")
+CallC6= Computadores("Windows 10 Pro","Intel 3 550","4GB","11 Anos de Idade","07 de Abril de 2022")
+CallC1= Computadores("Windows 11 Home","Intel 5 3330","8GB","2 Anos de Idade","31 de Março de 2022")
 
 #Variáveis de conteúdo na tela principal relacionado com a sidebar  
 if setor == "Cobrança":
@@ -83,36 +88,81 @@ if setor == "Cobrança":
     image = Image.open('fluxos/cobranca.png')
     st.image(image, caption='Organização de computadores da Cobrança', use_column_width=True)
 
-elif setor == "Selecionar...":
-    st.markdown('Este software fornece gerenciamento computadorizado e automatizado a todos os computadores da Speed Fiber.')
 elif setor == "Call Center":
    
     fila7,fila8,fila9,fila10,fila11 = st.columns(5)
     with fila7:
         st.subheader("CallC7")
+        st.text(CallC7.os)
+        st.text(CallC7.processador)
+        st.text(CallC7.memoria)
+        st.text(CallC7.idade)
+        st.text(CallC7.dataFormatacao)
     with fila8:
         st.subheader("CallC8")
-    with fila9:
-        st.subheader("CallC9")
+        st.text(CallC8.os)
+        st.text(CallC8.processador)
+        st.text(CallC8.memoria)
+        st.text(CallC8.idade)
+        st.text(CallC8.dataFormatacao)
     with fila10:
         st.subheader("CallC10")
+        st.text(CallC10.os)
+        st.text(CallC10.processador)
+        st.text(CallC10.memoria)
+        st.text(CallC10.idade)
+        st.text(CallC10.dataFormatacao)
     with fila11:
         st.subheader("CallC11")
+        st.text(CallC11.os)
+        st.text(CallC11.processador)
+        st.text(CallC11.memoria)
+        st.text(CallC11.idade)
+        st.text(CallC11.dataFormatacao)
     fila2,fila3,fila4,fila5,fila6 = st.columns(5)
     with fila2:
         st.subheader("CallC2")
+        st.text(CallC2.os)
+        st.text(CallC2.processador)
+        st.text(CallC2.memoria)
+        st.text(CallC2.idade)
+        st.text(CallC2.dataFormatacao)
     with fila3:
         st.subheader("CallC3")
+        st.text(CallC3.os)
+        st.text(CallC3.processador)
+        st.text(CallC3.memoria)
+        st.text(CallC3.idade)
+        st.text(CallC3.dataFormatacao)
     with fila4:
         st.subheader("CallC4")
+        st.text(CallC4.os)
+        st.text(CallC4.processador)
+        st.text(CallC4.memoria)
+        st.text(CallC4.idade)
+        st.text(CallC4.dataFormatacao)
     with fila5:
         st.subheader("CallC5")
+        st.text(CallC5.os)
+        st.text(CallC5.processador)
+        st.text(CallC5.memoria)
+        st.text(CallC5.idade)
+        st.text(CallC5.dataFormatacao)
     with fila6:
         st.subheader("CallC6")
+        st.text(CallC6.os)
+        st.text(CallC6.processador)
+        st.text(CallC6.memoria)
+        st.text(CallC6.idade)
+        st.text(CallC6.dataFormatacao)
     fila1, fila18 = st.columns(2)
     with fila1:
         st.subheader("CallC1")
-
+        st.text(CallC1.os)
+        st.text(CallC1.processador)
+        st.text(CallC1.memoria)
+        st.text(CallC1.idade)
+        st.text(CallC1.dataFormatacao)
 
     image3 = Image.open('fluxos/Sala Sac Pronto.png')
     st.image(image3, caption='Organização de computadores do Sac', use_column_width=True)
