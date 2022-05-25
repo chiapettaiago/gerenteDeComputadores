@@ -33,6 +33,7 @@ cobranca1 = Computadores("Windows 10", "Intel Core 2 Quad", "3GB", "14 anos de i
 cobranca2 = Computadores("Windows 11", "Intel Pentium Gold", "8 GB", "3 anos de idade", "Sem Registro")
 cobranca3 = Computadores("Windows 11", "Intel Core i3", "6 GB", "6 anos de uso", "07 de abril de 2022")
 cobranca4 = Computadores("Windows 11", "Intel Core i5", "8 GB", "3 anos de idade", "07 de fevereiro de 2022")
+cobranca5 = Computadores("Windows 10", "Intel Pentium Gold", "8Gb", "Idade?", "29 de Março de 2022")
 
 cx1 = Computadores("Windows 11", "Intel Pentium Gold", "8GB", "3 anos de idade", "07 de março de 2022")
 cx2 = Computadores("Windows 11", "Intel Pentium Gold", "8GB", "3 anos de idade", "27 de janeiro de 2022")
@@ -57,7 +58,7 @@ CallC1= Computadores("Windows 11 Home","Intel 5 3330","8GB","2 Anos de Idade","3
 #Variáveis de conteúdo na tela principal relacionado com a sidebar  
 if setor == "Cobrança":
     st.subheader('Setor de Cobrança')
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
         st.subheader("C 01")
         st.text(cobranca1.os)
@@ -84,7 +85,14 @@ if setor == "Cobrança":
         st.text(cobranca4.memoria)
         st.text(cobranca4.idade)
         st.text(cobranca4.dataFormatacao)
-
+    with col5:
+        st.subheader("C 05")
+        st.text(cobranca4.os)
+        st.text(cobranca4.processador)
+        st.text(cobranca4.memoria)
+        st.text(cobranca4.idade)
+        st.text(cobranca4.dataFormatacao)
+        
     image = Image.open('fluxos/cobranca.png')
     st.image(image, caption='Organização de computadores da Cobrança', use_column_width=True)
 
@@ -166,6 +174,7 @@ elif setor == "Call Center":
 
     image3 = Image.open('fluxos/Sala Sac Pronto.png')
     st.image(image3, caption='Organização de computadores do Sac', use_column_width=True)
+    
 elif setor == "Financeiro":
     st.warning('Ainda estamos coletando esses dados. Aguarde só mais um pouco.')
 elif setor == "Gerencia":
@@ -189,6 +198,7 @@ elif setor == "Caixa":
         st.text(cx2.dataFormatacao)
     imageCX = Image.open('fluxos/caixas.png')
     st.image(imageCX, caption='Organização de computadores do Caixa', use_column_width=True)
+
 elif setor == "Atendimento SAC":
     st.subheader('Antendimento SAC Presencial')
     colSac1, colSac2 = st.columns(2)
@@ -206,10 +216,9 @@ elif setor == "Atendimento SAC":
         st.text(atendimentoSac2.memoria)
         st.text(atendimentoSac2.idade)
         st.text(atendimentoSac2.dataFormatacao)
-
-
     imageAtendimentoSac = Image.open('fluxos/Atendimento Sac.png')
     st.image(imageAtendimentoSac, caption='Organização de computadores do Atendimento Presencial do Sac', use_column_width=True)
+
 elif setor == "Vendas":
     st.subheader("Setor de Vendas")
     colVendas1, colVendas2 = st.columns(2)
