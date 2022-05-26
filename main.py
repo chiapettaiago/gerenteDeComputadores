@@ -35,13 +35,13 @@ cobranca3 = Computadores("Windows 11", "Intel Core i3", "6 GB", "6 anos de uso",
 cobranca4 = Computadores("Windows 11", "Intel Core i5", "8 GB", "3 anos de idade", "07 de fevereiro de 2022")
 cobranca5 = Computadores("Windows 10", "Intel Pentium Gold", "8Gb", "Idade?", "29 de Março de 2022")
 
-cx1 = Computadores("Windows 11", "Intel Pentium Gold", "8GB", "3 anos de idade", "07 de março de 2022")
+cx1 = Computadores("Windows 11", "Intel Pentium Gold", "8GB", "3 anos de idade", "26 de maio de 2022")
 cx2 = Computadores("Windows 11", "Intel Pentium Gold", "8GB", "3 anos de idade", "27 de janeiro de 2022")
 
 vendas1 = Computadores("Windows 10","Intel Core i3", "2 GB", "6 anos de idade", "31 de janeiro de 2022")
 vendas2 = Computadores("Windows 10","Intel Core i3", "2 GB", "6 anos de idade", "13 de janeiro de 2020")
 
-atendimentoSac1 = Computadores("Windows 11 Pro","Intel Duo E7500","4GB","12 Anos de Idade","11 de Abril de 2022")
+atendimentoSac1 = Computadores("Windows 11 Pro","Intel Duo E7500","4GB","12 Anos de Idade","26 de Maio de 2022")
 atendimentoSac2 = Computadores("Windows 11 Home","Intel I5 3330","8GB","2 Anos de Idade","03 de Maio de 2022")
 
 CallC7 = Computadores("Windows 11 Pro","Intel 5 3330","8Gb","2 Anos de Idade","16 de Maio de 2022")
