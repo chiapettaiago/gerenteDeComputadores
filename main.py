@@ -29,14 +29,14 @@ setor = st.sidebar.selectbox("Gerenciamento de Computadores por Setor", ["Seleci
 about = st.sidebar.selectbox("Informações do sistema Legionário", ["Selecione...","Sobre", "Política de Privacidade", "Termos de Uso"])
 
 #Tipos de Computadores e especiificações
-cobranca1 = Computadores("Windows 10", "Intel Core 2 Quad", "3GB", "14 anos de idade", "Sem Registro")
+cobranca1 = Computadores("Windows 10", "Intel Core 2 Quad", "4GB", "14 anos de idade", "Sem Registro")
 cobranca2 = Computadores("Windows 11", "Intel Pentium Gold", "8 GB", "3 anos de idade", "Sem Registro")
 cobranca3 = Computadores("Windows 11", "Intel Core i3", "6 GB", "6 anos de uso", "07 de abril de 2022")
-cobranca4 = Computadores("Windows 11", "Intel Core i5", "8 GB", "3 anos de idade", "07 de fevereiro de 2022")
-cobranca5 = Computadores("Windows 10", "Intel Pentium Gold", "8Gb", "Idade?", "29 de Março de 2022")
+cobranca5 = Computadores("Windows 11", "Intel Core i5", "8 GB", "3 anos de idade", "07 de fevereiro de 2022")
+cobranca4 = Computadores("Windows 10", "Intel Pentium Gold", "8Gb", "Idade?", "29 de Março de 2022")
 
 cx1 = Computadores("Windows 11", "Intel Pentium Gold", "8GB", "3 anos de idade", "26 de maio de 2022")
-cx2 = Computadores("Windows 11", "Intel Pentium Gold", "8GB", "3 anos de idade", "27 de janeiro de 2022")
+cx2 = Computadores("Windows 11", "Intel Pentium Gold", "8GB", "3 anos de idade", "26 de maio de 2022")
 
 vendas1 = Computadores("Windows 10","Intel Core i3", "2 GB", "6 anos de idade", "31 de janeiro de 2022")
 vendas2 = Computadores("Windows 10","Intel Core i3", "2 GB", "6 anos de idade", "13 de janeiro de 2020")
@@ -87,11 +87,11 @@ if setor == "Cobrança":
         st.text(cobranca4.dataFormatacao)
     with col5:
         st.subheader("C 05")
-        st.text(cobranca4.os)
-        st.text(cobranca4.processador)
-        st.text(cobranca4.memoria)
-        st.text(cobranca4.idade)
-        st.text(cobranca4.dataFormatacao)
+        st.text(cobranca5.os)
+        st.text(cobranca5.processador)
+        st.text(cobranca5.memoria)
+        st.text(cobranca5.idade)
+        st.text(cobranca5.dataFormatacao)
         
     image = Image.open('fluxos/cobranca.png')
     st.image(image, caption='Organização de computadores da Cobrança', use_column_width=True)
@@ -241,7 +241,7 @@ elif setor == "Sede RCA":
 
 #Variaveis de informações sobre o sistema Legionário
 if about == "Sobre":
-    st.subheader('Sistema Legionário versão 0.12')
+    st.subheader('Sistema Legionário versão 0.19')
     st.text('Construído utilizando a linguagem Python e baseado na licença MIT.')
     st.text('Desenvolvido pelo setor de TI da Speed Fiber Teresópolis')
     st.text('Desenvolvedores: Iago Chiapetta, Patrick Gonçalves.')
